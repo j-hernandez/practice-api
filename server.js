@@ -1,13 +1,10 @@
 const express = require("express");
 const app = express();
 
-// const app = require("express")();
-
 // middleware
 app.use(express.json());
 app.use(express.urlencoded());
 
-const PORT = 3001;
 // Setup a connection to the database with pg-promise
 const pgp = require("pg-promise")();
 const db = pgp("postgres://hyeeumfv:1YwH3PINc4cZLU1YqnL2Lix1AtNwci7s@queenie.db.elephantsql.com:5432/hyeeumfv")
@@ -62,6 +59,6 @@ app.get('/ping', (req, res) => {
     res.send('pong');
 })
 
-app.listen(PORT, () => {
-    console.log(`My API is now running on port ${PORT}`);
+app.listen(3001, () => {
+    console.log(`My API is now running on port ${3001}`);
 })
