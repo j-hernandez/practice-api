@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 
@@ -8,7 +9,7 @@ app.use(express.urlencoded());
 
 // Setup a connection to the database with pg-promise
 const pgp = require("pg-promise")();
-const db = pgp("postgres://hyeeumfv:1YwH3PINc4cZLU1YqnL2Lix1AtNwci7s@queenie.db.elephantsql.com:5432/hyeeumfv")
+const db = pgp(process.env.POSTGRES_CONNECTION_STRING);
 
 // CRUD Stuff down here
 

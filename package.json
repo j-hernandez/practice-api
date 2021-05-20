@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "pg": "^8.6.0",
     "pg-promise": "^10.10.2"
