@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3001;
+
 
 // middleware
 app.use(express.json());
@@ -60,6 +60,6 @@ app.get('/ping', (req, res) => {
     res.send('pong');
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`My API is now running on port ${3001}`);
 })
